@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Article, CoverPhoto, Footer, Head } from '@dailybruin/lux'
+import HoverVideo from '../components/HoverVideo/HoverVideo'
 
 export const query = graphql`
   query {
@@ -33,6 +34,7 @@ const IndexPage = ({ data }) => (
     />
     <Article dropcap={true} content={data.kerckhoffArticle.content} />
     <Footer developers="Nathan Smith" copyrightYear={2018} />
+    <HoverVideo imageURL="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg" videoURL="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"/>
   </>
 )
 
