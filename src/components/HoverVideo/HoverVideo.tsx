@@ -4,6 +4,8 @@ import { css } from 'react-emotion'
 import IconButton from '@material-ui/core/IconButton'
 import Pause from '@material-ui/icons/Pause'
 import PlayArrow from '@material-ui/icons/PlayArrow'
+import VolumeUp from '@material-ui/icons/VolumeUp'
+import VolumeOff from '@material-ui/icons/VolumeOff'
 
 import 'video-react/dist/video-react.css'
 
@@ -26,10 +28,8 @@ class HoverVideo extends React.Component<HoverVideoProps, HoverVideoState> {
     }
   }
 
-  setMuted(muted) {
-    return () => {
-      this.setState({ mute: muted })
-    };
+  toggleMuted = () => {
+    this.setState(prevState => ({mute: !prevState.mute}))
   }
 
   toggle = () => {
@@ -70,6 +70,7 @@ class HoverVideo extends React.Component<HoverVideoProps, HoverVideoState> {
               </IconButton>
             </div>
             <div
+              onClick={this.toggleMuted}
               className={css`
                 position: absolute;
                 bottom: 0;
@@ -78,20 +79,30 @@ class HoverVideo extends React.Component<HoverVideoProps, HoverVideoState> {
                 color: white;
               `}
             >
-              <IconButton onClick={this.setMuted(true)}>
-                <Pause
+              <IconButton>
+                { this.state.mute ? 
+                <VolumeOff
                   fontSize="small"
                   className={css`
                     color: white;
                   `}
                 />
+                :
+                <VolumeUp
+                  fontSize="small"
+                  className={css`
+                    color: white;
+                  `}
+                />
+                }
+
               </IconButton>
             </div>
             <Player
               playsInline
               autoPlay
               poster="/assets/poster.png"
-              mute={this.state.mute}
+              muted={this.state.mute}
               src={this.props.videoURL}
             >
               <BigPlayButton position="center" />
