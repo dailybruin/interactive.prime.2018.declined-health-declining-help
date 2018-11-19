@@ -14,14 +14,22 @@ interface HoverVideoProps {
 
 interface HoverVideoState {
   video: boolean
+  mute: boolean
 }
 
 class HoverVideo extends React.Component<HoverVideoProps, HoverVideoState> {
-  constructor(props) {
-    super(props)
+  constructor(props, context) {
+    super(props, context)
     this.state = {
       video: false,
+      mute: false,
     }
+  }
+
+  setMuted(muted) {
+    return () => {
+      this.setState({ mute: muted })
+    };
   }
 
   toggle = () => {
@@ -61,10 +69,29 @@ class HoverVideo extends React.Component<HoverVideoProps, HoverVideoState> {
                 />
               </IconButton>
             </div>
+            <div
+              className={css`
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 100;
+                color: white;
+              `}
+            >
+              <IconButton onClick={this.setMuted(true)}>
+                <Pause
+                  fontSize="small"
+                  className={css`
+                    color: white;
+                  `}
+                />
+              </IconButton>
+            </div>
             <Player
               playsInline
               autoPlay
               poster="/assets/poster.png"
+              mute={this.state.mute}
               src={this.props.videoURL}
             >
               <BigPlayButton position="center" />

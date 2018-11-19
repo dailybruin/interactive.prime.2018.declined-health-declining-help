@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "@dailybruin/gatsby-source-kerckhoff": "^1.1.1",
-    "@dailybruin/lux": "1.5.4",
+    "@dailybruin/lux": "^1.7.0",
     "@material-ui/core": "^3.5.1",
     "@material-ui/icons": "^3.0.1",
     "@types/react": "16.4.18",
