@@ -19,17 +19,17 @@ interface VideoOnClickProps {
   imageURL: string
 }
 
-class VideoOnClick extends React.Component<VideoOnClickProps, VideoOnClickState> {
-  constructor(props, context) {
-    super(props, context)
-    this.state = {
-      video: false,
-      mute: false,
-    }
+class VideoOnClick extends React.Component<
+  VideoOnClickProps,
+  VideoOnClickState
+> {
+  state = {
+    video: false,
+    mute: false,
   }
 
   toggleMuted = () => {
-    this.setState(prevState => ({mute: !prevState.mute}))
+    this.setState(prevState => ({ mute: !prevState.mute }))
   }
 
   toggle = () => {
@@ -80,22 +80,21 @@ class VideoOnClick extends React.Component<VideoOnClickProps, VideoOnClickState>
               `}
             >
               <IconButton>
-                { this.state.mute ? 
-                <VolumeOff
-                  fontSize="small"
-                  className={css`
-                    color: white;
-                  `}
-                />
-                :
-                <VolumeUp
-                  fontSize="small"
-                  className={css`
-                    color: white;
-                  `}
-                />
-                }
-
+                {this.state.mute ? (
+                  <VolumeOff
+                    fontSize="small"
+                    className={css`
+                      color: white;
+                    `}
+                  />
+                ) : (
+                  <VolumeUp
+                    fontSize="small"
+                    className={css`
+                      color: white;
+                    `}
+                  />
+                )}
               </IconButton>
             </div>
             <Player
