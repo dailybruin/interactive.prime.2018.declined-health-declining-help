@@ -27,14 +27,9 @@ export const query = graphql`
 `
 const IndexPage = ({ data }) => (
   <>
-    <div
-      className={css`
-        position: absolute;
-        height: 100%;
-        width: 100%;
-      `}
-    >
-      <Slider2 />
+    <div>
+      <Slider2 text={['Test1', 'Karl', 'Richard', 'Mindi']} />
+      <p>hello world</p>
     </div>
   </>
 )
