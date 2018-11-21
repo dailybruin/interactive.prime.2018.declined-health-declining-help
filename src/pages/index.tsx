@@ -1,7 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Article, CoverPhoto, Footer, Head } from '@dailybruin/lux'
+import Slider from '../components/SlideShowClicker'
+import Slider2 from '../components/SlideShowClicker2'
 
+import Slider3 from '../components/SlideShowClicker3'
 export const query = graphql`
   query {
     site {
@@ -23,16 +26,7 @@ export const query = graphql`
 `
 const IndexPage = ({ data }) => (
   <>
-    <Head {...data.site.siteMetadata} />
-    <CoverPhoto
-      headline={data.kerckhoffArticle.headline}
-      authors={data.kerckhoffArticle.author}
-      imageURL="https://chancellor.ucla.edu/wp-content/uploads/2018/07/ChancellorBlock_1366x912_acf_cropped.jpg"
-      xPosition="start"
-      yPosition="center"
-    />
-    <Article dropcap={true} content={data.kerckhoffArticle.content} />
-    <Footer developers="Nathan Smith" copyrightYear={2018} />
+    <Slider2 textArray={['Test 1', 'Test 2', 'Test 3']} />
   </>
 )
 
