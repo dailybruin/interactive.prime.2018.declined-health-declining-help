@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { Article, CoverPhoto, Footer, Head } from '@dailybruin/lux'
 import Slider from '../components/SlideShowClicker'
 import Slider2 from '../components/SlideShowClicker2'
+import { css } from 'emotion'
 
 import Slider3 from '../components/SlideShowClicker3'
 export const query = graphql`
@@ -26,7 +27,15 @@ export const query = graphql`
 `
 const IndexPage = ({ data }) => (
   <>
-    <Slider2 textArray={['Test 1', 'Test 2', 'Test 3']} />
+    <div
+      className={css`
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      `}
+    >
+      <Slider2 />
+    </div>
   </>
 )
 
