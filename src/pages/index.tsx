@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Article, CoverPhoto, Footer, Head } from '@dailybruin/lux'
-import HoverVideo from '../components/HoverVideo/HoverVideo'
+import HoverVideo from '../components/VideoOnClick/VideoOnClick'
 
 export const query = graphql`
   query {
