@@ -53,6 +53,8 @@ export default class Slider2 extends React.Component<
           background-color: black;
           color: white;
           position: absolute;
+          padding: 10px;
+          text-align: center;
           height: 100%;
           width: 100%;
         `}
@@ -62,7 +64,7 @@ export default class Slider2 extends React.Component<
           className={
             this.state.hidden
               ? css`
-                  animation: fadeout 2s;
+                  animation: fadeout 1.5s;
                   @keyframes fadeout {
                     from {
                       opacity: 1;
@@ -73,7 +75,7 @@ export default class Slider2 extends React.Component<
                   }
                 `
               : css`
-                  animation: fadein 2s;
+                  animation: fadein 1.5s;
                   @keyframes fadein {
                     from {
                       opacity: 0;
@@ -85,7 +87,7 @@ export default class Slider2 extends React.Component<
                 `
           }
         >
-          {this.props.text[this.state.currentIndex]}
+          <h2>{this.props.text[this.state.currentIndex]}</h2>
         </div>
       </div>
     )
