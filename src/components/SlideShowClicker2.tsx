@@ -88,6 +88,15 @@ export default class Slider2 extends React.Component<
           }
         >
           <h2>{this.props.text[this.state.currentIndex]}</h2>
+          {this.state.currentIndex === 0 && (
+            <p
+              className={css`
+                font-size: 14px;
+              `}
+            >
+              Click to continue
+            </p>
+          )}
         </div>
       </div>
     )
