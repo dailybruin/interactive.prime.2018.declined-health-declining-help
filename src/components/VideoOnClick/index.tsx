@@ -147,7 +147,7 @@ class VideoOnClick extends React.Component<
                 />
               </IconButton>
             </div>
-            <img src={this.props.imageURL} className={css``} />
+            <img src={this.props.imageURL} />
           </div>
         )}
       </div>
