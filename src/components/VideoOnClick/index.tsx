@@ -1,11 +1,14 @@
 import * as React from 'react'
 import { Player, BigPlayButton, ControlBar } from 'video-react'
 import { css } from 'react-emotion'
-import IconButton from '@material-ui/core/IconButton'
-import Pause from '@material-ui/icons/Pause'
-import PlayArrow from '@material-ui/icons/PlayArrow'
-import VolumeUp from '@material-ui/icons/VolumeUp'
-import VolumeOff from '@material-ui/icons/VolumeOff'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause, faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons'
+library.add(faPlay)
+library.add(faPause)
+library.add(faVolumeMute)
+library.add(faVolumeUp)
 
 import 'video-react/dist/video-react.css'
 
@@ -41,8 +44,8 @@ class VideoOnClick extends React.Component<
     return (
       <div
         className={css`
-          height: 300px;
-          width: 400px;
+          max-width: 100%;
+          object-fit: contain;
         `}
       >
         {this.state.video && (
@@ -60,14 +63,9 @@ class VideoOnClick extends React.Component<
                 color: white;
               `}
             >
-              <IconButton onClick={this.toggle}>
-                <Pause
-                  fontSize="small"
-                  className={css`
-                    color: white;
-                  `}
-                />
-              </IconButton>
+              <div onClick={this.toggle} className={css`margin: 20px`}>
+                <FontAwesomeIcon icon="pause" />
+              </div>
             </div>
             <div
               onClick={this.toggleMuted}
@@ -79,23 +77,13 @@ class VideoOnClick extends React.Component<
                 color: white;
               `}
             >
-              <IconButton>
+              <div className={css`margin: 20px`}>
                 {this.state.mute ? (
-                  <VolumeOff
-                    fontSize="small"
-                    className={css`
-                      color: white;
-                    `}
-                  />
+                  <FontAwesomeIcon icon="volume-up" />
                 ) : (
-                  <VolumeUp
-                    fontSize="small"
-                    className={css`
-                      color: white;
-                    `}
-                  />
+                  <FontAwesomeIcon icon="volume-mute" />
                 )}
-              </IconButton>
+              </div>
             </div>
             <Player
               playsInline
@@ -138,14 +126,9 @@ class VideoOnClick extends React.Component<
                 color: white;
               `}
             >
-              <IconButton onClick={this.toggle}>
-                <PlayArrow
-                  fontSize="small"
-                  className={css`
-                    color: white;
-                  `}
-                />
-              </IconButton>
+              <div onClick={this.toggle} className={css`margin: 20px`}>
+                <FontAwesomeIcon icon="play" />
+              </div>
             </div>
             <img src={this.props.imageURL} />
           </div>
