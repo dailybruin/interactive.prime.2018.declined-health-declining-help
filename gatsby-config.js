@@ -3,7 +3,7 @@ const slugify = require('slugify')
 const siteName = 'declined-health-declining-help'
 const description = 'SITE_DESCRIPTION'
 const image =
-  'https://chancellor.ucla.edu/wp-content/uploads/2018/07/ChancellorBlock_1366x912_acf_cropped.jpg'
+  'https://assets.dailybruin.com/images/interactive.prime.2018.teddy/web.prime.homelessness.ADX_2-22751bcd4955eeb69f5d100c928d85fb.JPG'
 const year = '2018'
 
 const url = `https://features.dailybruin.com/${year}/${slugify(siteName)}`

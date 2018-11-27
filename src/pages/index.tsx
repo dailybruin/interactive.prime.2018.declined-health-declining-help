@@ -1,7 +1,9 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import { Article, CoverPhoto, Footer, Head } from '@dailybruin/lux'
+import Slider2 from '../components/SlideShowClicker2'
 import { css } from 'emotion'
+import CustomArticle from '../components/CustomArticle'
 
 export const query = graphql`
   query {
@@ -22,13 +24,33 @@ export const query = graphql`
     }
   }
 `
+
 const IndexPage = ({ data }) => (
-  <>
+  <div
+    className={css`
+      height: 100vh;
+      width: 100vw;
+      img {
+        margin-bottom: 0;
+      }
+    `}
+  >
     <Head {...data.site.siteMetadata} />
+    <Slider2
+      text={[
+        'They asked how she was going to walk.',
+        'Miss Mary’s health had been declining for a couple of months, but now it was worse.',
+        'Her legs were badly swollen and she couldn’t stand up on her own. ',
+        'Seven minutes later, paramedics arrived.',
+        'They asked her if she wanted to be taken to the hospital.',
+        'Miss Mary declined politely.',
+        '“I’m fine,” she said.',
+      ]}
+    />
     <CoverPhoto
       headline={data.kerckhoffArticle.headline}
       authors={data.kerckhoffArticle.author}
-      imageURL="https://chancellor.ucla.edu/wp-content/uploads/2018/07/ChancellorBlock_1366x912_acf_cropped.jpg"
+      imageURL="https://assets.dailybruin.com/images/interactive.prime.2018.teddy/web.prime.homelessness.ADX_2-22751bcd4955eeb69f5d100c928d85fb.JPG"
       xPosition="start"
       yPosition="center"
     />
@@ -55,9 +77,28 @@ const IndexPage = ({ data }) => (
         to her.’”
       </p>
     </div>
-    <Article dropcap={true} content={data.kerckhoffArticle.content} />
-    <Footer developers="Nathan Smith" copyrightYear={2018} />
-  </>
+    <CustomArticle
+      dropcap={false}
+      content={data.kerckhoffArticle.content}
+      style={css`
+        margin-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      `}
+    />
+    <Footer
+      developers={[
+        'Nathan Smith',
+        'Richard Yang',
+        'Kevin Qian',
+        'Mindi Cao',
+        'Karl Huang',
+        'Max Wu',
+        'Megan Le',
+      ]}
+      copyrightYear={2018}
+    />
+  </div>
 )
 
 export default IndexPage
