@@ -69,8 +69,6 @@ export default class CustomArticle extends React.Component<ArticleProps> {
             return <Image key={i} {...image} />
           case ContentType.PullQuote:
             const pullQuote = JSON.parse(content.value) as PullQuoteProps
-            console.log('THIS IS PULLQUOTE PROPS', pullQuote)
-
             const pullQuoteStyle = css`
               display: flex;
               font-family: Averia Gruesa Libre;
