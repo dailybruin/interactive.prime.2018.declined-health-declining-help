@@ -76,7 +76,21 @@ const IndexPage = ({ data }) => (
       `}
     >
       Scroll to continue
-      <img src={arrow} />
+      <img
+        src={arrow}
+        className={css`
+          animation: bounce 4s infinite;
+          @keyframes bounce {
+            0%,
+            100% {
+              transform: translate(0px, 4px);
+            }
+            50% {
+              transform: translate(0px, 14px);
+            }
+          }
+        `}
+      />
     </div>
     <div
       className={css`
