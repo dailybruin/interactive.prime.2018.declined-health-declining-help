@@ -97,6 +97,7 @@ const IndexPage = ({ data }) => (
         background-color: #1d1a1a;
         color: #ffffff;
         padding: 1rem;
+        padding-top: 50px;
         display: flex;
         width: 100%;
         flex-direction: column;

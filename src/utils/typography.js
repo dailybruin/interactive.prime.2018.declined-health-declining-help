@@ -12,6 +12,14 @@ const typography = new Typography({
       name: 'Monda',
       styles: ['400'],
     },
+    {
+      name: 'Pontano Sans',
+      styles: ['400'],
+    },
+    {
+      name: 'Averia Gruesa Libre',
+      styles: ['400'],
+    },
   ],
   headerFontFamily: ['Monda', 'sans-serif'],
   bodyFontFamily: ['Noto Serif', 'serif'],

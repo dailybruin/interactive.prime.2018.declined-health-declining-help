@@ -1,7 +1,8 @@
 const slugify = require('slugify')
 
 const siteName = 'declined-health-declining-help'
-const description = 'SITE_DESCRIPTION'
+const description =
+  'In Los Angeles, a significant number of deaths in the homeless population occur in individuals who may be unable to help themselves. Read the stories of those who seek a solution in spite of an ethical debate that has left the community gridlocked.'
 const image =
   'https://assets.dailybruin.com/images/interactive.prime.2018.teddy/web.prime.homelessness.ADX_2-22751bcd4955eeb69f5d100c928d85fb.JPG'
 const year = '2018'

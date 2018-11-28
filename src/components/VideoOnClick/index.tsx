@@ -100,6 +100,7 @@ class VideoOnClick extends React.Component<
               <div
                 className={css`
                   margin: 20px;
+                  text-shadow: 2px 2px red;
                 `}
               >
                 {this.state.mute ? (
@@ -126,6 +127,9 @@ class VideoOnClick extends React.Component<
                 <BigPlayButton position="center" />
                 <ControlBar disableCompletely className="my-class" />
               </Player>
+              <figcaption>
+                {this.props.caption} ({this.props.credit})
+              </figcaption>
             </div>
           </div>
         ) : (
@@ -152,13 +156,30 @@ class VideoOnClick extends React.Component<
               <div
                 onClick={this.toggle}
                 className={css`
-                  margin: 20px;
+                  margin: 30px;
+                  padding: 0px;
                 `}
               >
                 <FontAwesomeIcon icon="play" />
               </div>
             </div>
-            <figure>
+            <figure
+              className={css`
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+              `}
+            >
+              <p
+                className={css`
+                  margin: 0;
+                  align-self: flex-end;
+                  color: #b0b0b0;
+                  font-family: 'Pontano Sans';
+                `}
+              >
+                CLICK TO PLAY
+              </p>
               <img src={this.props.img} alt={this.props.alt} />
               <figcaption>
                 {this.props.caption} ({this.props.credit})
