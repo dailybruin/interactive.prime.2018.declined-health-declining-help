@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { css } from 'emotion'
+import { css } from 'react-emotion'
 // import Carousel from 're-carousel'
 // import { render } from 'react-dom'
 
@@ -110,6 +110,22 @@ export default class Slider2 extends React.Component<
             </p>
           )}
         </div>
+        <p
+          onClick={() => {
+            this.setState(() => {
+              return { currentIndex: 100 }
+            })
+          }}
+          className={css`
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            margin: 0;
+            cursor: pointer;
+          `}
+        >
+          SKIP
+        </p>
       </div>
     )
   }
