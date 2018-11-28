@@ -23,3 +23,5 @@ To build:
 ```
 yarn build
 ```
+## Netlify link
+https://tender-euler-555120.netlify.com/
