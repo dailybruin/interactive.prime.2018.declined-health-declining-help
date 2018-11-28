@@ -61,6 +61,7 @@ export default class Slider2 extends React.Component<
                 text-align: center;
                 height: 100%;
                 width: 100%;
+                z-index: 5;
               `
         }
         onClick={this.state.hidden ? () => {} : this.incCount}

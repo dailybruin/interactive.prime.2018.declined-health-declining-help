@@ -5,6 +5,8 @@ import Slider2 from '../components/SlideShowClicker2'
 import { css } from 'react-emotion'
 import CustomArticle from '../components/CustomArticle'
 
+import arrow from '../images/vector.png'
+
 export const query = graphql`
   query {
     site {
@@ -56,7 +58,26 @@ const IndexPage = ({ data }) => (
       imageURL="https://assets.dailybruin.com/images/interactive.prime.2018.teddy/web.prime.homelessness.ADX_2-22751bcd4955eeb69f5d100c928d85fb.JPG"
       xPosition="start"
       yPosition="center"
+      darken={0.4}
     />
+    <div
+      className={css`
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        transform: translate(0, -100px);
+      `}
+    >
+      Scroll to continue
+      <img src={arrow} />
+    </div>
     <div
       className={css`
         background-color: #1d1a1a;
@@ -64,7 +85,9 @@ const IndexPage = ({ data }) => (
         padding: 1rem;
         display: flex;
         width: 100%;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
       `}
     >
       <div
