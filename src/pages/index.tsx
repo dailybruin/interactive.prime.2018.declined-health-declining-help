@@ -2,7 +2,7 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { css } from 'react-emotion'
 import { Article, CoverPhoto, Footer, Head } from '@dailybruin/lux'
-import HoverVideo from '../components/VideoOnClick'
+import VideoOnClick from '../components/VideoOnClick'
 
 export const query = graphql`
   query {
@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => (
     <Article dropcap={true} content={data.kerckhoffArticle.content} />
     <Footer developers="Nathan Smith" copyrightYear={2018} />
     <div className={css`width: 50%`}>
-      <HoverVideo
+      <VideoOnClick
         imageURL="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"
         videoURL="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
       />
