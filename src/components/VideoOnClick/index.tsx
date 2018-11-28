@@ -14,14 +14,30 @@ library.add(faPause)
 library.add(faVolumeMute)
 library.add(faVolumeUp)
 import 'video-react/dist/video-react.css'
+
+import DebbieVideo from '../../images/debbie.mp4'
+import DonovanVideo from '../../images/donovan.mp4'
+import MarkVideo from '../../images/mark.mp4'
+
 interface VideoOnClickState {
   video: boolean
   mute: boolean
 }
 interface VideoOnClickProps {
-  videoURL: string
-  imageURL: string
+  alt: string
+  caption: string
+  credit: string
+  img: string
+  vid: string
 }
+
+const getVid = (vidString: string) => {
+  if (vidString == 'prime.homelessness.vid.debbie.1080p.mov') return DebbieVideo
+  if (vidString == 'prime.homelessness.vid.donovan.1080p.mov')
+    return DonovanVideo
+  if (vidString == 'prime.homelessness.vid.mark.1080p.mov') return MarkVideo
+}
+
 class VideoOnClick extends React.Component<
   VideoOnClickProps,
   VideoOnClickState
@@ -96,6 +112,7 @@ class VideoOnClick extends React.Component<
             <div
               className={css`
                 pointer-events: none;
+                margin-bottom: 10px;
               `}
             >
               <Player
@@ -103,9 +120,9 @@ class VideoOnClick extends React.Component<
                 autoPlay
                 poster="/assets/poster.png"
                 muted={this.state.mute}
-                src={this.props.videoURL}
                 controls={false}
               >
+                <source src={getVid(this.props.vid)} type="video/mp4" />
                 <BigPlayButton position="center" />
                 <ControlBar disableCompletely className="my-class" />
               </Player>
@@ -141,7 +158,12 @@ class VideoOnClick extends React.Component<
                 <FontAwesomeIcon icon="play" />
               </div>
             </div>
-            <img src={this.props.imageURL} />
+            <figure>
+              <img src={this.props.img} alt={this.props.alt} />
+              <figcaption>
+                {this.props.caption} ({this.props.credit})
+              </figcaption>
+            </figure>
           </div>
         )}
       </div>

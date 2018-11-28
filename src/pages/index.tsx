@@ -4,7 +4,6 @@ import { CoverPhoto, Footer, Head } from '@dailybruin/lux'
 import Slider2 from '../components/SlideShowClicker2'
 import { css } from 'react-emotion'
 import CustomArticle from '../components/CustomArticle'
-import VideoOnClick from '../components/VideoOnClick'
 
 export const query = graphql`
   query {
@@ -34,6 +33,9 @@ const IndexPage = ({ data }) => (
       img {
         margin-bottom: 0;
       }
+      figcaption {
+        font-style: italic;
+      }
     `}
   >
     <Head {...data.site.siteMetadata} />
@@ -54,10 +56,6 @@ const IndexPage = ({ data }) => (
       imageURL="https://assets.dailybruin.com/images/interactive.prime.2018.teddy/web.prime.homelessness.ADX_2-22751bcd4955eeb69f5d100c928d85fb.JPG"
       xPosition="start"
       yPosition="center"
-    />
-    <VideoOnClick
-      imageURL="https://www.gettyimages.ca/gi-resources/images/Homepage/Hero/UK/CMS_Creative_164657191_Kingfisher.jpg"
-      videoURL="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
     />
     <div
       className={css`

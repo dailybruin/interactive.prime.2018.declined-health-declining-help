@@ -2,6 +2,7 @@ import * as React from 'react'
 import { css } from 'react-emotion'
 import { Image } from '@dailybruin/lux'
 import { PullQuote } from '@dailybruin/lux'
+import VideoOnClick from './VideoOnClick'
 
 enum ContentType {
   Text = 'text',
@@ -43,6 +44,14 @@ interface ImageProps {
 interface PullQuoteProps {
   caption: string
   style?: string
+}
+
+interface VideoOnClickProps {
+  alt: string
+  caption: string
+  credit: string
+  img: string
+  vid: string
 }
 
 /** A footer to go at the bottom of every page. */
@@ -91,6 +100,9 @@ export default class CustomArticle extends React.Component<ArticleProps> {
             return <PullQuote text={pullQuote.caption} style={pullQuoteStyle} />
           case ContentType.Line:
             return <hr />
+          case ContentType.ImgVid:
+            const imgVid = JSON.parse(content.value) as VideoOnClickProps
+            return <VideoOnClick key={i} {...imgVid} />
           default:
             break
         }
