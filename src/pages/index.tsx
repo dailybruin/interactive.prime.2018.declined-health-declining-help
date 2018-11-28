@@ -14,6 +14,7 @@ export const query = graphql`
         siteName
         description
         url
+        image
       }
     }
     kerckhoffArticle {
