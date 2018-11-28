@@ -1,12 +1,14 @@
 import * as React from 'react'
 import { css } from 'react-emotion'
 import { Image } from '@dailybruin/lux'
+import { PullQuote } from '@dailybruin/lux'
 
 enum ContentType {
   Text = 'text',
   Image = 'image',
   Line = 'line',
   ImgVid = 'imgvid',
+  PullQuote = 'pull',
 }
 
 interface Content {
@@ -38,11 +40,17 @@ interface ImageProps {
   style?: string
 }
 
+interface PullQuoteProps {
+  caption: string
+  style?: string
+}
+
 /** A footer to go at the bottom of every page. */
 export default class CustomArticle extends React.Component<ArticleProps> {
   public static defaultProps = { dropcap: false }
 
   public render() {
+    console.log(this.props.content)
     const renderedContent = this.props.content.map(
       (content: any, i: number) => {
         switch (content.type) {
@@ -59,6 +67,28 @@ export default class CustomArticle extends React.Component<ArticleProps> {
           case ContentType.Image:
             const image = JSON.parse(content.value) as ImageProps
             return <Image key={i} {...image} />
+          case ContentType.PullQuote:
+            const pullQuote = JSON.parse(content.value) as PullQuoteProps
+            const pullQuoteStyle = css`
+              display: flex;
+              font-family: Averia Gruesa Libre;
+              font-style: regular;
+              font-size: 25px;
+              line-height: 43px;
+              padding: 0;
+              border: none;
+              float: right;
+              width: 70%;
+              @media screen and (max-width: 808px) {
+                float: none;
+                text-align: center;
+                width: 100%;
+              }
+              margin: 10px -190px 24px 36px;
+              position: relative;
+              top: 5px;
+            `
+            return <PullQuote text={pullQuote.caption} style={pullQuoteStyle} />
           case ContentType.Line:
             return <hr />
           default:
