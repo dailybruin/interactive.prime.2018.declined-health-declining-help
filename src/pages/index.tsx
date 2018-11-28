@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import { css } from 'react-emotion'
 import { Article, CoverPhoto, Footer, Head } from '@dailybruin/lux'
+import VideoOnClick from '../components/VideoOnClick'
 import Slider2 from '../components/SlideShowClicker2'
 import { css } from 'emotion'
 import CustomArticle from '../components/CustomArticle'
