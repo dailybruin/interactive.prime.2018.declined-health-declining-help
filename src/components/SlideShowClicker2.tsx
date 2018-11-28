@@ -104,7 +104,7 @@ export default class Slider2 extends React.Component<
             <p
               className={css`
                 font-size: 14px;
-                margin-top: 15px;
+                margin-top: 20px;
               `}
             >
               Click to continue
