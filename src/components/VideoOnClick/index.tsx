@@ -48,7 +48,7 @@ class VideoOnClick extends React.Component<
           object-fit: contain;
         `}
       >
-        {this.state.video && (
+        {this.state.video ? (
           <div
             className={css`
               position: relative;
@@ -61,6 +61,7 @@ class VideoOnClick extends React.Component<
                 right: 0;
                 z-index: 100;
                 color: white;
+                cursor: pointer;
               `}
             >
               <div onClick={this.toggle} className={css`margin: 20px`}>
@@ -71,6 +72,7 @@ class VideoOnClick extends React.Component<
               onClick={this.toggleMuted}
               className={css`
                 position: absolute;
+                cursor: pointer;
                 bottom: 0;
                 right: 0;
                 z-index: 100;
@@ -79,41 +81,35 @@ class VideoOnClick extends React.Component<
             >
               <div className={css`margin: 20px`}>
                 {this.state.mute ? (
-                  <FontAwesomeIcon icon="volume-up" />
+                  <FontAwesomeIcon icon="volume-up"/>
                 ) : (
-                  <FontAwesomeIcon icon="volume-mute" />
+                  <FontAwesomeIcon icon="volume-mute"/>
                 )}
               </div>
             </div>
-            <Player
-              playsInline
-              autoPlay
-              poster="/assets/poster.png"
-              muted={this.state.mute}
-              src={this.props.videoURL}
-            >
-              <BigPlayButton position="center" />
-              <ControlBar disableCompletely className="my-class" />
-            </Player>
+            <div className={css`pointer-events: false`}>
+              <Player
+                playsInline
+                autoPlay
+                poster="/assets/poster.png"
+                muted={this.state.mute}
+                src={this.props.videoURL}
+                controls={false}
+              >
+                <BigPlayButton position="center" />
+                <ControlBar disableCompletely className="my-class" />
+              </Player>
+            </div>
           </div>
-        )}
-        {!this.state.video && (
+        ) : 
+        (
           <div
             className={css`
               position: relative;
-              filter: none;
-              -webkit-filter: grayscale(100%);
-              -moz-filter: grayscale(100%);
-              -ms-filter: grayscale(100%);
-              -o-filter: grayscale(100%);
-              transition: 0.2s;
+              filter: grayscale(100%);
+              transition: 0.3s;
               &:hover {
                 filter: none;
-                -webkit-filter: grayscale(0%);
-                -moz-filter: grayscale(0%);
-                -ms-filter: grayscale(0%);
-                -o-filter: grayscale(0%);
-                cursor: pointer;
               }
             `}
           >
@@ -124,6 +120,7 @@ class VideoOnClick extends React.Component<
                 right: 0;
                 z-index: 100;
                 color: white;
+                cursor: pointer;
               `}
             >
               <div onClick={this.toggle} className={css`margin: 20px`}>
