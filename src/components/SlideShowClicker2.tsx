@@ -23,10 +23,7 @@ export default class Slider2 extends React.Component<
     })
     setTimeout(() => {
       this.setState(ps => {
-        return { currentIndex: ps.currentIndex + 1 }
-      })
-      this.setState(() => {
-        return { hidden: false }
+        return { currentIndex: ps.currentIndex + 1, hidden: false }
       })
     }, 750)
   }
@@ -66,7 +63,7 @@ export default class Slider2 extends React.Component<
                 width: 100%;
               `
         }
-        onClick={this.incCount}
+        onClick={this.state.hidden ? () => {} : this.incCount}
       >
         <div
           className={
@@ -102,10 +99,11 @@ export default class Slider2 extends React.Component<
           >
             {this.props.text[this.state.currentIndex]}
           </h2>
-          {this.state.currentIndex === 0 && (
+          {this.state.currentIndex < this.props.text.length && (
             <p
               className={css`
                 font-size: 14px;
+                margin-top: 15px;
               `}
             >
               Click to continue
