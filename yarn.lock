@@ -722,18 +722,20 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@dailybruin/gatsby-source-kerckhoff@^1.1.1":
+"@dailybruin/gatsby-source-kerckhoff@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@dailybruin/gatsby-source-kerckhoff/-/gatsby-source-kerckhoff-1.1.1.tgz#cdf751a789e0626875588b8d8f28efbfb8b9ead7"
+  integrity sha512-kkLWK+sPdf1vbEQI9Eg2y1KNrmZhFq+8X6mAol6RsTSKVTBRh63pgzpLNNW6g0rMaSBT0+LrMvenktATBf/n0g==
   dependencies:
     "@types/node" "^10.12.1"
     "@types/node-fetch" "^2.1.2"
     node-fetch "^2.2.0"
     typescript "^3.1.4"
 
-"@dailybruin/lux@^1.9.1":
+"@dailybruin/lux@1.9.1":
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/@dailybruin/lux/-/lux-1.9.1.tgz#ff328862ac6f30881e873bd95a4a505b2a3ea646"
+  integrity sha512-x+HgDUEc7Hbm8xjEtLoivUwBEGpeUgAn0xn0AxjO3BlzJPrgSYIN8F6tZQ/IZnzZCX/o0C4X+fv3Kp+9rF8fQQ==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.8"
     "@fortawesome/free-solid-svg-icons" "^5.5.0"
@@ -802,28 +804,29 @@
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.8.tgz#8cacd1efd1aa956e1ef173f0abcf2ce1b7a0c66f"
 
-"@fortawesome/fontawesome-svg-core@^1.2.8":
+"@fortawesome/fontawesome-svg-core@1.2.8", "@fortawesome/fontawesome-svg-core@^1.2.8":
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.8.tgz#b802b7f3d5b9d9d92ae92c18e865df468dcdf561"
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.8"
 
-"@fortawesome/free-solid-svg-icons@^5.5.0":
+"@fortawesome/free-solid-svg-icons@5.5.0", "@fortawesome/free-solid-svg-icons@^5.5.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.5.0.tgz#4d815df4bba076f209eb409bc56d9d830367a7c0"
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.8"
 
-"@fortawesome/react-fontawesome@^0.1.3":
+"@fortawesome/react-fontawesome@0.1.3", "@fortawesome/react-fontawesome@^0.1.3":
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.3.tgz#266b4047892c3d10498af1075d89252f74015b11"
   dependencies:
     humps "^2.0.1"
     prop-types "^15.5.10"
 
-"@material-ui/core@^3.5.1":
+"@material-ui/core@3.5.1":
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-3.5.1.tgz#365d1c392d3df3b37295db0548f4cca501034e69"
+  integrity sha512-yMBwYV5HQ/kZjncSmzHSx4uxJCePdbq9N58Jl0tq9D1gD5fKVJY/lItnQLRlcpCzZUkGxfDhpDutvLDq58ZAkg==
   dependencies:
     "@babel/runtime" "7.1.2"
     "@material-ui/utils" "^3.0.0-alpha.0"
@@ -3382,13 +3385,13 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
-emotion-server@^9.2.12:
+emotion-server@9.2.12, emotion-server@^9.2.12:
   version "9.2.12"
   resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-9.2.12.tgz#aaaaa04843108943d1ce5a796e0bc40b06a3223e"
   dependencies:
     create-emotion-server "^9.2.12"
 
-emotion@^9.2.12:
+emotion@9.2.12, emotion@^9.2.12:
   version "9.2.12"
   resolved "https://registry.yarnpkg.com/emotion/-/emotion-9.2.12.tgz#53925aaa005614e65c6e43db8243c843574d1ea9"
   dependencies:
@@ -4096,9 +4099,10 @@ follow-redirects@^1.0.0:
   dependencies:
     debug "=3.1.0"
 
-font-awesome@^4.7.0:
+font-awesome@4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
+  integrity sha1-j6jPBBGhoxr9B7BtKQK7n8gVoTM=
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -4247,21 +4251,23 @@ gatsby-link@^2.0.6:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-emotion@^2.0.6:
+gatsby-plugin-emotion@2.0.6, gatsby-plugin-emotion@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-2.0.6.tgz#5909476c43073f764429d7559fcfb136449026cf"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-google-analytics@^2.0.7:
+gatsby-plugin-google-analytics@2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.7.tgz#22ac5fe3a226c19bd523997cb3891ab0d3454e37"
+  integrity sha512-BJXtj+LryPvntQ3Z1IVWi/WsZIIrC8a8OFsSdW7ivhaxMloCNH3Pm4wA9K09v1OljLbXSNUr46qkaBPUVC7shg==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-manifest@^2.0.7:
+gatsby-plugin-manifest@2.0.7:
   version "2.0.7"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.7.tgz#3b74503d368c5b830c2dbf745c7073fe0f4aa737"
+  integrity sha512-vVSyGv5vU6jyARbI54DIVWVh+zkd23ItGb040iuS5uQS96gvz3UB7n3B5z4HBt/xV084eMoT7tuSOGncahoVbQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -6315,9 +6321,10 @@ nth-check@^1.0.2, nth-check@~1.0.1:
   dependencies:
     boolbase "~1.0.0"
 
-nuka-carousel@^4.4.3:
+nuka-carousel@4.4.3:
   version "4.4.3"
   resolved "https://registry.yarnpkg.com/nuka-carousel/-/nuka-carousel-4.4.3.tgz#ae815cb7ffa2ae2d4b2572da244d85a1574d8a31"
+  integrity sha512-MkPZm4Mx/OUAu0zUmDxJ36CGudOTd7x++bBxMB+/t1GffyUArUZYi+GICKkw2q2/owzqdVAtZs0pNfPOimtSwA==
   dependencies:
     d3-ease "^1.0.3"
     exenv "^1.2.0"
@@ -7312,9 +7319,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-re-carousel@^2.3.0:
+re-carousel@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/re-carousel/-/re-carousel-2.3.0.tgz#21c71f4be595fbac9f25a5fa54437290493d4137"
+  integrity sha512-4BtQ5VRK/ZBgH6oAXL3qYiaHIM5xHcgZvMxgQHkj2u4OZReAPK3/tZ7dzHfOc5Kx7mVXtxB/pFexpGXbRY8Q1w==
   dependencies:
     prop-types "^15.6.2"
 
@@ -7359,7 +7367,7 @@ react-dom@16.6.3:
     prop-types "^15.6.2"
     scheduler "^0.11.2"
 
-react-emotion@^9.2.12:
+react-emotion@9.2.12, react-emotion@^9.2.12:
   version "9.2.12"
   resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.2.12.tgz#74d1494f89e22d0b9442e92a33ca052461955c83"
   dependencies:
@@ -7378,9 +7386,10 @@ react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
-react-fontawesome@^1.6.1:
+react-fontawesome@1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/react-fontawesome/-/react-fontawesome-1.6.1.tgz#eddce17e7dc731aa09fd4a186688a61793a16c5c"
+  integrity sha1-7dzhfn3HMaoJ/UoYZoimF5OhbFw=
   dependencies:
     prop-types "^15.5.6"
 
@@ -8082,9 +8091,10 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-slugify@^1.3.2:
+slugify@1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.3.2.tgz#b9aac7a964b94319871cf3f6e2cd06d47ee218aa"
+  integrity sha512-RB7T2QO4+F8zc5UA+yujQb8V5GDmyiGzCW7e/x5CyKUEx0xzI9Hz5ptOS85GDBHlDx6LDooyHxw5FwKkximL5Q==
 
 slugify@^1.3.3:
   version "1.3.3"
@@ -8971,7 +8981,7 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-video-react@^0.13.1:
+video-react@0.13.1:
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/video-react/-/video-react-0.13.1.tgz#5d0dc68748f9b12e118beea1998d6ae5f6cbd6ba"
   integrity sha512-AeGSpddfHv0UxeJztWUALYEjCdzXM1QdtQ5GD1VUd3vxcgwgIfB7EzFKcewRevSHHK8TDmjNksbvbWRobF/QeA==
