@@ -47,6 +47,6 @@
     "video-react": "^0.13.1"
   },
   "devDependencies": {
-    "prettier": "1.14.3"
+    "prettier": "2.8.8"
   }
 }
